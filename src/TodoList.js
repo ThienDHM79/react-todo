@@ -4,7 +4,8 @@ export default function TodoList( {todos} ) {
   return (
       
     todos.map(todo => {
-      return <Todo todo = {todo}/>
+      //add key to only re-render element that change
+      return <Todo key={todo.id} todo = {todo}/>
     })
   )
 }
